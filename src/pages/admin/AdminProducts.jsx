@@ -81,6 +81,13 @@ export default function AdminProducts() {
     setForm(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
   };
   
+  const handlePriceChange = (e) => {
+    const { name, value } = e.target;
+    // Strip everything except digits
+    const clean = value.replace(/[^0-9]/g, '');
+    setForm(prev => ({ ...prev, [name]: clean }));
+  };
+  
   const handleAddShade = () => {
     if (shadeInput.trim() && !form.shades.includes(shadeInput.trim())) {
       setForm(prev => ({ ...prev, shades: [...prev.shades, shadeInput.trim()] }));
@@ -124,8 +131,8 @@ export default function AdminProducts() {
       
       const productData = {
         ...form,
-        price: form.price ? Number(form.price) : null,
-        oldPrice: form.oldPrice ? Number(form.oldPrice) : null,
+        price: form.price ? Number(String(form.price).replace(/[^0-9]/g, '')) : null,
+        oldPrice: form.oldPrice ? Number(String(form.oldPrice).replace(/[^0-9]/g, '')) : null,
         stock: form.stock !== '' ? Number(form.stock) : null,
         images: imageUrls
       };
@@ -318,11 +325,11 @@ export default function AdminProducts() {
                   </div>
                   <div className="form-group" style={{ marginBottom: 0 }}>
                     <label className="form-label">Precio ($)</label>
-                    <input className="form-input" type="number" name="price" value={form.price} onChange={handleChange} />
+                    <input className="form-input" type="text" inputMode="numeric" name="price" value={form.price} onChange={handlePriceChange} placeholder="Ej: 34900" />
                   </div>
                   <div className="form-group" style={{ marginBottom: 0 }}>
                     <label className="form-label">Precio Anterior</label>
-                    <input className="form-input" type="number" name="oldPrice" value={form.oldPrice} onChange={handleChange} />
+                    <input className="form-input" type="text" inputMode="numeric" name="oldPrice" value={form.oldPrice} onChange={handlePriceChange} placeholder="Ej: 45000" />
                   </div>
                 </div>
                 

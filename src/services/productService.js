@@ -14,10 +14,10 @@ import { db } from '../config/firebaseApp';
 
 const PRODUCTS_COLLECTION = 'products';
 
-// Format price for display: 34900 -> "$34.900"
+// Format price for display: 34900 -> "$34,900"
 export const formatPrice = (price) => {
   if (!price && price !== 0) return 'Por completar';
-  return `$${Number(price).toLocaleString('es-CO')}`;
+  return `$${Math.round(Number(price)).toLocaleString('en-US')}`;
 };
 
 // Get all products
