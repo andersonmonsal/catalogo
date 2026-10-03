@@ -30,10 +30,7 @@ export const StoreProvider = ({ children }) => {
         (snapshot) => {
           let prods = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
           
-          // Si la base de datos está vacía, mostramos los productos por defecto para que no se vea vacío
-          if (prods.length === 0) {
-            prods = INITIAL_PRODUCTS.map((p, i) => ({ id: `local_${i}`, ...p }));
-          }
+          // Eliminados los productos de prueba. El catálogo inicia vacío.
 
           setProducts(prods);
           
