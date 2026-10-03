@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { WHATSAPP_NUMBER } from '../config/firebase';
+import { formatPrice } from '../services/productService';
 
 const CartContext = createContext(null);
 
@@ -71,18 +72,16 @@ export const CartProvider = ({ children }) => {
       return;
     }
 
-    let message = `¡Hola, Shalito Cosmetics! 💕\n\nQuiero realizar este pedido:\n\n`;
+    let message = `¡Hola! 💕 Quiero hacer este pedido:\n\n`;
 
     items.forEach((item, index) => {
-      message += `*Producto ${index + 1}:* ${item.name}\n`;
-      if (item.shade) message += `*Tono:* ${item.shade}\n`;
-      message += `*Cantidad:* ${item.quantity}\n`;
-      message += `*Precio unitario:* $${Number(item.price).toLocaleString('es-CO')}\n`;
-      message += `*Subtotal:* $${Number(item.price * item.quantity).toLocaleString('es-CO')}\n\n`;
+      message += `${index + 1}. *${item.name}*`;
+      if (item.shade) message += ` (${item.shade})`;
+      message += `\n   Cant: ${item.quantity} × ${formatPrice(item.price)} = ${formatPrice(item.price * item.quantity)}\n`;
     });
 
-    message += `*TOTAL: $${Number(total).toLocaleString('es-CO')}*\n\n`;
-    message += `¿Me pueden ayudar con mi pedido? 🛍️`;
+    message += `\n💰 *Total: ${formatPrice(total)}*\n\n`;
+    message += `¡Quedo atenta, gracias! 🛍️`;
 
     const encodedMessage = encodeURIComponent(message);
     const cleanNumber = number.replace(/\D/g, '');

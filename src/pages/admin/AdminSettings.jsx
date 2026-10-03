@@ -81,8 +81,8 @@ export default function AdminSettings() {
                 <input className="form-input" name="instagram" value={form.instagram || ''} onChange={handleChange} placeholder="ej. shalito_cosmetics" />
               </div>
               <div className="form-group" style={{ marginBottom: 0 }}>
-                <label className="form-label">Usuario de Facebook</label>
-                <input className="form-input" name="facebook" value={form.facebook || ''} onChange={handleChange} />
+                <label className="form-label">Usuario de TikTok</label>
+                <input className="form-input" name="tiktok" value={form.tiktok || ''} onChange={handleChange} placeholder="ej. shalito_cosmetics" />
               </div>
             </div>
 

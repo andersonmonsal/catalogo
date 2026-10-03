@@ -30,16 +30,16 @@ export default function Footer() {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </a>
               )}
-              {storeConfig?.facebook && (
+              {storeConfig?.tiktok && (
                 <a
-                  href={`https://facebook.com/${storeConfig.facebook}`}
+                  href={`https://tiktok.com/@${storeConfig.tiktok}`}
                   target="_blank"
                   rel="noreferrer"
                   className="social-link"
-                  aria-label="Facebook"
+                  aria-label="TikTok"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.69a8.25 8.25 0 004.76 1.51V6.75a4.82 4.82 0 01-1-.06z"/>
                   </svg>
                 </a>
               )}
