@@ -93,7 +93,6 @@ export default function Catalog() {
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
               <h1 className="section-title" style={{ textAlign: 'left', fontSize: '1.6rem', marginBottom: 0 }}>
                 {filterType === 'ofertas' ? '🏷️ Ofertas Especiales' :
-                 filterType === 'nuevos' ? '✨ Nuevos Lanzamientos' :
                  activeCategory !== 'all' ? activeCategory : 'Catálogo Completo'}
               </h1>
               {/* Search box */}
@@ -130,16 +129,6 @@ export default function Catalog() {
                 }}
               >
                 🏷️ Ofertas
-              </button>
-              <button
-                className={`filter-btn ${filterType === 'nuevos' ? 'active' : ''}`}
-                onClick={() => {
-                  searchParams.set('filter', 'nuevos');
-                  searchParams.delete('categoria');
-                  setSearchParams(searchParams);
-                }}
-              >
-                ✨ Nuevos
               </button>
               {categories.map(cat => (
                 <button

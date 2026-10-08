@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { ShoppingBag, Search, Menu, X, Home, BookOpen, Tag, Star, Sparkles, Phone } from 'lucide-react';
+import { ShoppingBag, Search, Menu, X, Home, BookOpen, Tag, Phone } from 'lucide-react';
 import { useCart } from '../../context/CartContext';
 import { useStore } from '../../context/StoreContext';
 import { formatPrice } from '../../services/productService';
@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { to: '/', label: 'Inicio', icon: Home },
   { to: '/catalogo', label: 'Catálogo', icon: BookOpen },
   { to: '/catalogo?filter=ofertas', label: 'Ofertas', icon: Tag },
-  { to: '/catalogo?filter=nuevos', label: 'Nuevos', icon: Sparkles },
   { to: '/contacto', label: 'Contacto', icon: Phone },
 ];
 

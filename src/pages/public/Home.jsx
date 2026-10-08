@@ -127,28 +127,6 @@ export default function Home() {
         </section>
       )}
 
-      {/* ── NEW ARRIVALS ───────────────────────────── */}
-      {newProducts.length > 0 && (
-        <section className="section">
-          <div className="container">
-            <div className="section-header">
-              <div>
-                <h2 className="section-title" style={{ textAlign: 'left' }}>✨ Nuevos Lanzamientos</h2>
-                <p className="section-subtitle" style={{ textAlign: 'left' }}>Lo más reciente en nuestra tienda</p>
-              </div>
-              <Link to="/catalogo?filter=nuevos" className="btn btn-outline btn-sm hide-mobile">
-                Ver todos <ArrowRight size={16} />
-              </Link>
-            </div>
-
-            <div className="products-grid">
-              {newProducts.slice(0, 4).map(product => (
-                <ProductCard key={product.id} product={product} onAdd={() => handleAdd(product)} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ── TRUST SECTION ──────────────────────────── */}
       <section className="section trust-section">

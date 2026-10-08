@@ -72,16 +72,26 @@ export const CartProvider = ({ children }) => {
       return;
     }
 
-    let message = `¡Hola! 💕 Quiero hacer este pedido:\n\n`;
+    let message = `¡Hola! 💕 Quisiera hacer el siguiente pedido:\n\n`;
+    message += `🛍️ *PRODUCTOS SELECCIONADOS:*\n`;
+    message += `─────────────────────\n`;
 
     items.forEach((item, index) => {
-      message += `${index + 1}. *${item.name}*`;
-      if (item.shade) message += ` (${item.shade})`;
-      message += `\n   Cant: ${item.quantity} × ${formatPrice(item.price)} = ${formatPrice(item.price * item.quantity)}\n`;
+      message += `\n${index + 1}. 💄 *${item.name}*`;
+      if (item.brand) message += `\n   📌 Marca: ${item.brand}`;
+      if (item.shade) message += `\n   🎨 Tono: *${item.shade}*`;
+      message += `\n   🔢 Cantidad: ${item.quantity}`;
+      message += `\n   💲 Precio: ${formatPrice(item.price)} c/u`;
+      if (item.quantity > 1) {
+        message += `\n   💵 Subtotal: ${formatPrice(item.price * item.quantity)}`;
+      }
+      message += `\n`;
     });
 
-    message += `\n💰 *Total: ${formatPrice(total)}*\n\n`;
-    message += `¡Quedo atenta, gracias! 🛍️`;
+    message += `\n─────────────────────\n`;
+    message += `💰 *TOTAL A PAGAR: ${formatPrice(total)}*\n`;
+    message += `─────────────────────\n\n`;
+    message += `¡Quedo atenta a la confirmación! 🙏✨`;
 
     const encodedMessage = encodeURIComponent(message);
     const cleanNumber = number.replace(/\D/g, '');
