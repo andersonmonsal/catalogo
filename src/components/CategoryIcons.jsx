@@ -141,8 +141,10 @@ export function getCategoryIcon(cat) {
     'Iluminadores':                <CatIconIluminadores />,
     'Pestañinas':                  <CatIconPestaninas />,
     'Labiales':                    <CatIconLabiales />,
+    'Paleta de sombra':            <CatIconDefault />,
     'Fijador de maquillaje':       <CatIconCremasFijadoras />,
-    'Lociones y cremas corporales':<CatIconLociones />,
+    'Lociones':                    <CatIconLociones />,
+    'Cremas corporales':           <CatIconLociones />,
     'Brochas':                     <CatIconBrochas />,
     'Accesorios':                  <CatIconAccesorios />,
   };

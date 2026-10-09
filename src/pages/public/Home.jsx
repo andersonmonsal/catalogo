@@ -201,7 +201,9 @@ const CATEGORIES_HOME = [
   { name: 'Correctores', icon: <CatIconCorrectores /> },
   { name: 'Labiales', icon: <CatIconLabiales /> },
   { name: 'Fijador de maquillaje', icon: <CatIconCremasFijadoras /> },
-  { name: 'Lociones y cremas corporales', icon: <CatIconLociones /> },
+  { name: 'Paleta de sombra', icon: <CatIconDefault /> },
+  { name: 'Lociones', icon: <CatIconLociones /> },
+  { name: 'Cremas corporales', icon: <CatIconLociones /> },
 ];
 
 function SparkleIcon() {
@@ -216,7 +218,8 @@ function getCategoryIcon(cat) {
   const map = {
     Skincare: <CatIconSkincare />, Correctores: <CatIconCorrectores />, Bases: <CatIconBases />, Polvos: <CatIconPolvos />,
     Rubores: <CatIconRubores />, Iluminadores: <CatIconIluminadores />, Pestañinas: <CatIconPestaninas />, Labiales: <CatIconLabiales />,
-    'Fijador de maquillaje': <CatIconCremasFijadoras />, 'Lociones y cremas corporales': <CatIconLociones />, Accesorios: <CatIconAccesorios />,
+    'Paleta de sombra': <CatIconDefault />,
+    'Fijador de maquillaje': <CatIconCremasFijadoras />, 'Lociones': <CatIconLociones />, 'Cremas corporales': <CatIconLociones />, Accesorios: <CatIconAccesorios />,
   };
   return map[cat] || <CatIconDefault />;
 }

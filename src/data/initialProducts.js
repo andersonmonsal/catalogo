@@ -714,10 +714,10 @@ export const INITIAL_CATEGORIES = [
   "Iluminadores",
   "Pestañinas",
   "Labiales",
-  "Brillos",
-  "Sombras",
+  "Paleta de sombra",
   "Fijador de maquillaje",
-  "Lociones y cremas corporales",
+  "Lociones",
+  "Cremas corporales",
   "Brochas",
   "Accesorios",
   "Otros"
