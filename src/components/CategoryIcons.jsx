@@ -133,18 +133,18 @@ export function CatIconDefault() {
  */
 export function getCategoryIcon(cat) {
   const map = {
-    'Skincare':         <CatIconSkincare />,
-    'Correctores':      <CatIconCorrectores />,
-    'Bases':            <CatIconBases />,
-    'Polvos':           <CatIconPolvos />,
-    'Rubores':          <CatIconRubores />,
-    'Iluminadores':     <CatIconIluminadores />,
-    'Pestañinas':       <CatIconPestaninas />,
-    'Labiales':         <CatIconLabiales />,
-    'Cremas Fijadoras': <CatIconCremasFijadoras />,
-    'Lociones':         <CatIconLociones />,
-    'Brochas':          <CatIconBrochas />,
-    'Accesorios':       <CatIconAccesorios />,
+    'Skincare':                    <CatIconSkincare />,
+    'Correctores':                 <CatIconCorrectores />,
+    'Bases':                       <CatIconBases />,
+    'Polvos':                      <CatIconPolvos />,
+    'Rubores':                     <CatIconRubores />,
+    'Iluminadores':                <CatIconIluminadores />,
+    'Pestañinas':                  <CatIconPestaninas />,
+    'Labiales':                    <CatIconLabiales />,
+    'Fijador de maquillaje':       <CatIconCremasFijadoras />,
+    'Lociones y cremas corporales':<CatIconLociones />,
+    'Brochas':                     <CatIconBrochas />,
+    'Accesorios':                  <CatIconAccesorios />,
   };
   return map[cat] || <CatIconDefault />;
 }

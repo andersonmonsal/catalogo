@@ -200,8 +200,8 @@ const CATEGORIES_HOME = [
   { name: 'Pestañinas', icon: <CatIconPestaninas /> },
   { name: 'Correctores', icon: <CatIconCorrectores /> },
   { name: 'Labiales', icon: <CatIconLabiales /> },
-  { name: 'Cremas Fijadoras', icon: <CatIconCremasFijadoras /> },
-  { name: 'Lociones', icon: <CatIconLociones /> },
+  { name: 'Fijador de maquillaje', icon: <CatIconCremasFijadoras /> },
+  { name: 'Lociones y cremas corporales', icon: <CatIconLociones /> },
 ];
 
 function SparkleIcon() {
@@ -216,7 +216,7 @@ function getCategoryIcon(cat) {
   const map = {
     Skincare: <CatIconSkincare />, Correctores: <CatIconCorrectores />, Bases: <CatIconBases />, Polvos: <CatIconPolvos />,
     Rubores: <CatIconRubores />, Iluminadores: <CatIconIluminadores />, Pestañinas: <CatIconPestaninas />, Labiales: <CatIconLabiales />,
-    'Cremas Fijadoras': <CatIconCremasFijadoras />, Lociones: <CatIconLociones />, Accesorios: <CatIconAccesorios />,
+    'Fijador de maquillaje': <CatIconCremasFijadoras />, 'Lociones y cremas corporales': <CatIconLociones />, Accesorios: <CatIconAccesorios />,
   };
   return map[cat] || <CatIconDefault />;
 }

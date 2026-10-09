@@ -716,8 +716,8 @@ export const INITIAL_CATEGORIES = [
   "Labiales",
   "Brillos",
   "Sombras",
-  "Cremas Fijadoras",
-  "Lociones",
+  "Fijador de maquillaje",
+  "Lociones y cremas corporales",
   "Brochas",
   "Accesorios",
   "Otros"
