@@ -57,7 +57,7 @@ export default function Home() {
                 </div>
                 <div className="hero__mini-divider" />
                 <div className="hero__mini-stat">
-                  <span className="hero__mini-num">Medellín</span>
+                  <span className="hero__mini-num">Colombia</span>
                   <span className="hero__mini-label">envíos</span>
                 </div>
                 <div className="hero__mini-divider" />
@@ -137,7 +137,7 @@ export default function Home() {
                 <Truck size={26} />
               </div>
               <h3 className="trust-card__title">Envíos Seguros</h3>
-              <p className="trust-card__desc">Despachos a toda el área metropolitana de Medellín con total seguridad.</p>
+              <p className="trust-card__desc">Despachos a Medellín y a todo Colombia con total seguridad.</p>
             </div>
             <div className="trust-card">
               <div className="trust-card__icon">

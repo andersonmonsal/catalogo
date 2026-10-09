@@ -112,7 +112,7 @@ export default function Contact() {
               </ContactCard>
 
               <ContactCard icon={<MapPin size={20} />} title="Zona de cobertura">
-                <span>Área metropolitana de Medellín</span>
+                <span>Medellín y a todo Colombia</span>
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
                   Despachos a domicilio disponibles
                 </span>

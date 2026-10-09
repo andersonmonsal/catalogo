@@ -86,7 +86,7 @@ export default function Footer() {
                 </a>
               )}
               <span style={{ fontSize: '0.85rem', color: 'var(--gray-400)', cursor: 'default' }}>
-                📦 Envíos a Medellín
+                📦 Envíos a Medellín y a todo Colombia
               </span>
             </div>
           </div>
