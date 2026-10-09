@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="footer__social">
               {storeConfig?.tiktok && (
                 <a
-                  href={`https://tiktok.com/@${storeConfig.tiktok}`}
+                  href="https://www.tiktok.com/@shalito_cosmetics?_r=1&_t=ZS-9AQ87aE1SIm"
                   target="_blank"
                   rel="noreferrer"
                   className="social-link"
