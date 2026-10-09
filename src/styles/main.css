@@ -2310,18 +2310,24 @@ h4, h5, h6 { font-family: var(--font-body); font-weight: 600; line-height: 1.3; 
   to { transform: rotate(360deg); }
 }
 
-.hero__visual-emoji {
+/* Logo en el Hero */
+.hero__logo-wrapper {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  animation: floatUp 3s ease-in-out infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: floatUp 4s ease-in-out infinite alternate;
+  filter: drop-shadow(0 16px 40px rgba(233, 30, 140, 0.25));
 }
-.hero__visual-emoji span {
-  font-size: 2.2rem;
-  filter: drop-shadow(0 4px 12px rgba(233,30,140,0.2));
+
+.hero__logo-img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  border-radius: 50%;
 }
+
 @keyframes floatUp {
   from { transform: translateY(0); }
   to { transform: translateY(-12px); }

@@ -70,11 +70,8 @@ export default function Home() {
 
             {/* decorative right side */}
             <div className="hero__visual" aria-hidden="true">
-              <div className="hero__visual-ring hero__visual-ring--outer" />
-              <div className="hero__visual-ring hero__visual-ring--inner" />
-              <div className="hero__visual-emoji">
-                <span>💄</span><span>✨</span><span>🌸</span>
-                <span>💅</span><span>🧴</span><span>⭐</span>
+              <div className="hero__logo-wrapper">
+                <img src="/logo.png" alt="Shalito Cosmetics Logo" className="hero__logo-img" />
               </div>
             </div>
           </div>
