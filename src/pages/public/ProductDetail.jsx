@@ -5,6 +5,7 @@ import { useStore } from '../../context/StoreContext';
 import { useCart } from '../../context/CartContext';
 import { useToast } from '../../context/ToastContext';
 import { formatPrice } from '../../services/productService';
+import { getCategoryIcon } from '../../components/CategoryIcons';
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -89,14 +90,6 @@ export default function ProductDetail() {
     }
   };
 
-  function getCategoryIcon(cat) {
-    const icons = {
-      Skincare: '✨', Correctores: '🖌️', Bases: '🧴', Polvos: '💨',
-      Rubores: '🌸', Iluminadores: '⭐', Pestañinas: '👁️', Labiales: '💋',
-      Accesorios: '🎀',
-    };
-    return icons[cat] || '🛍️';
-  }
 
   return (
     <div className="product-detail">
@@ -338,14 +331,6 @@ function RelatedProducts({ products, currentProduct, onAdd }) {
 
   if (related.length === 0) return null;
 
-  function getCategoryIcon(cat) {
-    const icons = {
-      Skincare: '✨', Correctores: '🖌️', Bases: '🧴', Polvos: '💨',
-      Rubores: '🌸', Iluminadores: '⭐', Pestañinas: '👁️', Labiales: '💋',
-      Accesorios: '🎠',
-    };
-    return icons[cat] || '🛒';
-  }
 
   return (
     <div className="section section-alt" style={{ marginTop: '2rem' }}>

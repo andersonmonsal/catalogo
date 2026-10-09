@@ -5,6 +5,9 @@ import { useStore } from '../../context/StoreContext';
 import { useCart } from '../../context/CartContext';
 import { useToast } from '../../context/ToastContext';
 import { formatPrice } from '../../services/productService';
+import {
+  getCategoryIcon
+} from '../../components/CategoryIcons';
 
 export default function Catalog() {
   const { products, categories, loading } = useStore();
@@ -208,10 +211,7 @@ function ProductCard({ product, onAdd }) {
           <img className="product-card__img" src={product.images[0]} alt={product.name} />
         ) : (
           <div className="product-card__img-placeholder">
-            {/* Category Icon */}
-            {product.category === 'Skincare' ? '✨' : 
-             product.category === 'Bases' ? '🧴' : 
-             product.category === 'Pestañinas' ? '👁️' : '🛍️'}
+            {getCategoryIcon(product.category)}
           </div>
         )}
         

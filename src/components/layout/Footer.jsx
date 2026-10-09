@@ -57,6 +57,8 @@ export default function Footer() {
               <Link to="/catalogo?categoria=Rubores">Rubores</Link>
               <Link to="/catalogo?categoria=Iluminadores">Iluminadores</Link>
               <Link to="/catalogo?categoria=Pestañinas">Pestañinas</Link>
+              <Link to="/catalogo?categoria=Cremas Fijadoras">Cremas Fijadoras</Link>
+              <Link to="/catalogo?categoria=Lociones">Lociones</Link>
               <Link to="/catalogo?filter=ofertas">Ofertas</Link>
             </div>
           </div>
