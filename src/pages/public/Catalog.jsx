@@ -152,9 +152,9 @@ export default function Catalog() {
               <div className="catalog-sort">
                 <SlidersHorizontal size={14} />
                 <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-                  <option value="newest">Más recientes</option>
-                  <option value="price_asc">Menor precio</option>
-                  <option value="price_desc">Mayor precio</option>
+                  <option value="newest">Como todo</option>
+                  <option value="price_asc">El más barato</option>
+                  <option value="price_desc">El más caro</option>
                   <option value="name_asc">Nombre (A-Z)</option>
                 </select>
               </div>
