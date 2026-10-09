@@ -146,7 +146,7 @@ export function getCategoryIcon(cat) {
     'Lociones':                    <CatIconLociones />,
     'Cremas corporales':           <CatIconLociones />,
     'Brochas':                     <CatIconBrochas />,
-    'Accesorios':                  <CatIconAccesorios />,
+    'Fijadores de cejas':          <CatIconDefault />,
   };
   return map[cat] || <CatIconDefault />;
 }

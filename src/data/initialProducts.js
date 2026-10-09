@@ -719,6 +719,6 @@ export const INITIAL_CATEGORIES = [
   "Lociones",
   "Cremas corporales",
   "Brochas",
-  "Accesorios",
+  "Fijadores de cejas",
   "Otros"
 ];

@@ -216,7 +216,7 @@ function getCategoryIcon(cat) {
     Skincare: <CatIconSkincare />, Correctores: <CatIconCorrectores />, Bases: <CatIconBases />, Polvos: <CatIconPolvos />,
     Rubores: <CatIconRubores />, Iluminadores: <CatIconIluminadores />, Pestañinas: <CatIconPestaninas />, Labiales: <CatIconLabiales />,
     'Paleta de sombra': <CatIconDefault />,
-    'Fijador de maquillaje': <CatIconCremasFijadoras />, 'Lociones': <CatIconLociones />, 'Cremas corporales': <CatIconLociones />, Accesorios: <CatIconAccesorios />,
+    'Fijador de maquillaje': <CatIconCremasFijadoras />, 'Lociones': <CatIconLociones />, 'Cremas corporales': <CatIconLociones />, 'Fijadores de cejas': <CatIconDefault />,
   };
   return map[cat] || <CatIconDefault />;
 }
