@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Search, SlidersHorizontal } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { useStore } from '../../context/StoreContext';
 import { useCart } from '../../context/CartContext';
 import { useToast } from '../../context/ToastContext';
@@ -149,15 +149,7 @@ export default function Catalog() {
                 {filteredProducts.length} producto{filteredProducts.length !== 1 ? 's' : ''}
                 {searchText && <span style={{ color: 'var(--primary)', fontWeight: 600 }}> · "{searchText}"</span>}
               </div>
-              <div className="catalog-sort">
-                <SlidersHorizontal size={14} />
-                <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-                  <option value="newest">Como todo</option>
-                  <option value="price_asc">El más barato</option>
-                  <option value="price_desc">El más caro</option>
-                  <option value="name_asc">Nombre (A-Z)</option>
-                </select>
-              </div>
+
             </div>
           </div>
         </div>
